@@ -7,7 +7,145 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navBody{
+  background-color: burlywood;
+}
+.iconImg{
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+}
+.appName{
+  display: inline-block;
+  margin: 0px;
+  position: absolute;
+  padding: 10px;
+  margin-top: 6px;
+  color: #8b008b;
+}
+.navLogin{
+  display: block;
+  text-align: right;
+  right: 12%;
+  position: absolute;
+  cursor: pointer;
+  font-size: larger;
+  top: 25px;
+  font-weight: bold;
+  color: #8b008b;
+}
+.navSignup{
+  display: inline-block;
+    text-align: right;
+    position: absolute;
+    font-size: larger;
+    top: 25px;
+    font-weight: bold;
+    left: 90.4%;
+    cursor: pointer;
+    color: #8b008b;
+}
+.loginIcon{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    display: inline-block;
+    left: 83%;
+    top: 25px;
+    cursor: pointer;
+}
+
+.signupIcon{
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  display: inline-block;
+  left: 89%;
+  top: 25px;
+  cursor: pointer;
+}
+.appSec{
+  cursor: pointer;
+}
+.bg-color-blue{
+  background-color: #1d52cc !important;
+}
+.textBody .firstSpan{
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1.6px;
+    line-height: 16px;
+    margin-bottom: 8px;
+    opacity: 1;
+    text-transform: uppercase;
+    color: #e5e5e5 !important;
+}
+.textBody h1{
+  color: #e5e5e5 !important;
+  letter-spacing: 1.6px;
+  margin-bottom: 8px;
+  opacity: 1;
+}
+.textBody h2{
+  color: #e5e5e5 !important;
+  font-weight: 200;
+  margin-top: 35%;
+}
+.textBody button{
+  color: #e5e5e5 !important;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  font-size: 16px;
+  line-height: 1.66;
+  padding: 10px 20px;
+  border-radius: 24px;
+  background-color: #222428;
+}
+.textBody button:hover{
+  background-color: rgb(144, 157, 185);
+}
+.bodyMainDiv{
+  padding-top: 100px;
+  padding-bottom: 15%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: 85px;
+  margin-left: 85px;
+}
+.imgBody{
+  margin-left: 30%;
+}
+.textBody{
+  width: 30%;
+  float: left;
+}
+.sideEffect{
+  background-color: #4277fc;
+    width: 300px;
+    color: white;
+    border-radius: 40px;
+    padding: 10px 25px;
+    margin-bottom: 10px;
+    position: fixed;
+    right: -300px;
+    z-index: 999;
+    transition: right 0.5s ease;
+    height: 30px;
+}
+.phone{
+  top: 200px;
+}
+.mail{
+  top: 256px;
+}
+.mail:hover , .phone:hover{
+  right: -100px;
+
 }
