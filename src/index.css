@@ -66,9 +66,11 @@ body {
 }
 .appSec{
   cursor: pointer;
+  width: auto;
 }
 .bg-color-blue{
   background-color: #1d52cc !important;
+  position: relative;
 }
 .textBody .firstSpan{
     font-size: 14px;
@@ -138,14 +140,156 @@ body {
     z-index: 999;
     transition: right 0.5s ease;
     height: 30px;
+    display: inline-block;
 }
 .phone{
   top: 200px;
 }
 .mail{
-  top: 256px;
+  top: 265px;
 }
-.mail:hover , .phone:hover{
+.phone:hover{
   right: -100px;
+}
+.mail:hover{
+  width: 20% !important;
+  right: -100px;
+}
+.phoneIcon{
+  width: 24px;
+  top: 14px;
+  position: absolute;
+  left: 20px;
+}
+.numberIcon{
+  top: 3px;
+  left: 24px;
+  position: relative;
+  font-size: larger;
+  color: aqua;
+  text-decoration: none;
+}
+.bg-color-blue.faded{
+  opacity: 0.3;
+  background-color: black;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 1039;
+    top: 0;
+    left: 0;
+    position: relative;
+}
+.loginSignupContainer{
+  display: inline-block;
+  background-color: #141E39;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 550px;
+  z-index: 99999;
+}
+.close-online-drawer{
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background-color: white;
+  cursor: pointer;
+}
+.close-online-drawer img{
+  width: 20px;
+  height: 20px;
+  margin-left: 14px;
+  margin-top: 14px;
+}
+.signupMain{
+  padding: 22%;
+}
+.sgnupMainChild{
+  color: white;
+  font-size: xx-large;
+  font-weight: 700;
+  padding-bottom: 30px;
+}
+.tickStyle{
+  width: 20px;
+}
+.sgnupContent div{
+  color: white;
+  display: inline;
+  top: -4px;
+  position: relative;
+  margin: 10px;
+  font-size: 20px !important;
+  line-height: 36px !important;
+}
+.userNameInput span{
+  font-size: large;
+  color: white;
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+.userNameInput{
+  margin-top: 20px;
+}
+.userNameInput input{
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  color: #141e39 !important;
+  max-width: 320px;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.passInput{
+  margin-top: -10px !important;
+}
 
+.passRule ul{
+  margin-block-start: 0px !important;
+  padding-inline-start: 14px;
+}
+.passRule ul li{
+  color: #f00;
+}
+.signupBtn{
+  color: #e5e5e5 !important;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  font-size: 16px;
+  line-height: 1.66;
+  padding: 10px 20px;
+  border-radius: 24px;
+  background-color: #222428;
+  float: right;
+  right: -44px;
+  position: relative;
+}
+.signupBtn:hover{
+  background-color: rgb(144, 157, 185);
+}
+.signupMain span{
+  color: white;
+  font-weight: 600;
+}
+.rfrLogin{
+  cursor: pointer;
+  color: #4277fc  !important;
+}
+.rfrLogin:hover{
+  color: #5010e3 !important;
 }
