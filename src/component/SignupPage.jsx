@@ -4,6 +4,8 @@ import {useDispatch } from 'react-redux';
 import {toast } from 'react-toastify';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { auth } from "../firebaseInit";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
 
 export default function SignupPage(){
@@ -34,8 +36,8 @@ export default function SignupPage(){
     function handleRfrLogin(){
         dispatch(changeDisplayValue('loginPage'));
     }
-    function validatedata(){
-        
+    const validatedata = async (e) =>{
+        e.preventDefault();
         if(userName.length === 0 || password.length === 0){
             if(userName.length === 0 && password.length === 0){
                 toast.error('username and password empty', {
@@ -61,9 +63,24 @@ export default function SignupPage(){
         if(password.length > 7 && password.length <21){
             if(/[A-Z]/.test(password) && /[a-z]/.test(password)){
                 if(/[!@#$%^&*(),.?":{}|<>]/.test(password)){
-                    toast.success('User Created' ,{
-                        autoClose:2000,
-                    });
+                    try {
+                        await createUserWithEmailAndPassword(auth, userName, password);
+                        toast.success('User Created' ,{
+                            autoClose:2000,
+                        });
+                        setUserName("");
+                        setPassword("");
+                        setTimeout(() => {
+                            closeComponent(); 
+                          }, 5000);
+
+                      } catch (error) {
+                        toast.error('Username already exist' ,{
+                            autoClose:2000,
+                        });
+                        
+                      }
+                    
                 }
                 else{
                     toast.error('password should contain atleast a special character', {
@@ -104,9 +121,7 @@ export default function SignupPage(){
                 autoClose: 2000,
               });
         }
-        toast.success('An error occurred!', {
-            autoClose: 2000,
-          });
+
     }
     return(
         isCloseClicked? null:

@@ -34,6 +34,18 @@ body {
   font-weight: bold;
   color: #8b008b;
 }
+
+.navlogout{
+  display: block;
+  text-align: right;
+  right: 10.5%;
+  position: absolute;
+  cursor: pointer;
+  font-size: larger;
+  top: 23px;
+  font-weight: bold;
+  color: #8b008b;
+}
 .navSignup{
   display: inline-block;
     text-align: right;
@@ -65,7 +77,6 @@ body {
   cursor: pointer;
 }
 .appSec{
-  cursor: pointer;
   width: auto;
 }
 .bg-color-blue{
@@ -292,4 +303,7 @@ body {
 }
 .rfrLogin:hover{
   color: #5010e3 !important;
+}
+.successlogin{
+  color: #fff;
 }
