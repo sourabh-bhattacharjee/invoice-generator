@@ -14,4 +14,32 @@ root.render(
     </Provider>
   
 );
-
+// eslint-disable-next-line no-lone-blocks
+// {fields.map((field, index) => (
+//   <div key={field.id}>
+//     <label>Item Description</label>
+//     <input
+//       {...register(`items.${index}.description`, { required: true })}
+//     />
+//     <label>Unit Cost</label>
+//     <input
+//       type="number"
+//       step="0.01"
+//       {...register(`items.${index}.unitCost`, { required: true })}
+//       onChange={() => handleCalculateAmount(index)}
+//     />
+//     <label>Quantity</label>
+//     <input
+//       type="number"
+//       {...register(`items.${index}.quantity`, { required: true })}
+//       onChange={() => handleCalculateAmount(index)}
+//     />
+    // <label>Amount</label>
+    // <input
+    //   type="text"
+    //   {...register(`items.${index}.amount`)}
+    //   readOnly
+    // />
+//     <button type="button" onClick={() => remove(index)}>Remove</button>
+//   </div>
+// ))}

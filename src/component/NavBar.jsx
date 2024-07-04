@@ -18,7 +18,7 @@ export default function NavBar({user}){
   };
     return(
         
-        <div className={`navBody}`}>
+        <div className="navBody">
             <div className="appSec">
                 <img className="iconImg" src="https://cdn-icons-png.flaticon.com/128/11521/11521864.png" alt="app-icon" />
                 <h1 className="appName">Invoice Generator</h1>
