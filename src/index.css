@@ -307,3 +307,66 @@ body {
 .successlogin{
   color: #fff;
 }
+.invpage{
+  border-radius: 32px;
+  background-color: #f08ffb;
+  padding-top: 27px !important; 
+}
+.invlabel{
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: large;
+  font-weight: 500;
+}
+.invInp{
+  border-radius: 10px;
+  line-height: 150%;
+    letter-spacing: -.011em;
+    background-clip: padding-box;
+    display: block;
+    padding-bottom: 12px;
+    padding-inline-end: 16px;
+    padding-inline-start: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 12px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.invContent{
+  padding: 30px;
+}
+.invContent h1{
+  color: #506b3f;
+  font-weight: 900;
+  position: relative;
+  text-align: center;
+  font-size: 60px;
+}
+
+.floatLeft{
+  float: left;
+}
+.widthHalf{
+  width: 50%;
+  padding-left: 12px;
+  padding-right: 12px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+.invImg{
+  max-width: 110px;
+  width: 72px;
+  float: right;
+  left: -40%;
+  top: -75px;
+  position: relative;
+}
+.textInp{
+  max-height: 48px;
+  min-height: 48px;
+  min-width: 454px;
+  max-width: 454px;
+}
