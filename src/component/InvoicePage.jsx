@@ -19,7 +19,7 @@ export default function InvoicePage() {
   const [discount, setDiscount] = useState(0);
   const [shippingFee, setShippingFee] = useState(0);
   const [currency, setCurrency] = useState("");
-  const { fields, append, remove } = useFieldArray({
+  const { fields, append } = useFieldArray({
     control,
     name: "items",
   });
@@ -132,17 +132,14 @@ export default function InvoicePage() {
   }
 
   const onSubmit = (data) => {
-    // if (!image || !data.InvoiceNumber || !data.PurchaseOrder || !data.YourCompanyDetails || !data.BillTo || !data.currency || !data.InvoiceDate || !data.PaymentDueDate) {
-    //     toast.error('Please Enter all required field', {
-    //         autoClose: 2000,
-    //       });
-    //       return;
+     if (!image || !data.InvoiceNumber || !data.PurchaseOrder || !data.YourCompanyDetails || !data.BillTo || !data.currency || !data.InvoiceDate || !data.PaymentDueDate ) {
+        toast.error('Please Enter all required field', {
+            autoClose: 2000,
+          });
+          return;
 
-    //   }
+      }
     const doc = new jsPDF();
-
-
-    
       const imgProps = doc.getImageProperties(image);
       const imgWidth = 50;
       const imgHeight = (imgProps.height * imgWidth) / imgProps.width;
@@ -153,12 +150,14 @@ export default function InvoicePage() {
       doc.text(`Invoice for ${data.YourCompanyDetails}`, 105, 20, null, null, "center");
       doc.addImage(image, "JPEG", 10, 0, imgWidth, imgHeight);
     
+      
       doc.setTextColor(0, 0, 0); // Black text
       doc.setFontSize(12);
       const startX = 10;
       const startY = imgHeight;
       const lineSpacing = 10;
-
+      doc.setFillColor(225, 200, 200); // body background
+      doc.rect(0, startY, doc.internal.pageSize.width, doc.internal.pageSize.height-imgHeight, "F");
     
     doc.text(`Invoice Number: ${data.InvoiceNumber}`, startX, startY+lineSpacing);
     doc.text(`Purchase Order: ${data.PurchaseOrder}`, 100, startY+lineSpacing);
@@ -200,7 +199,7 @@ export default function InvoicePage() {
     doc.text(`Subtotal: ${subTotal} ${currency}`, 200, tableEndY, null, null, 'right');
 
     // Tax
-    doc.text(`Tax: ${taxAmount}%  ${currency}`, 200, tableEndY + 10, null, null, 'right');
+    doc.text(`Tax: (${tax}%) ${taxAmount}  ${currency}`, 200, tableEndY + 10, null, null, 'right');
 
     // Discount
     doc.text(`Discount: ${discount} ${currency}`, 200, tableEndY + 20, null, null, 'right');
@@ -216,7 +215,7 @@ export default function InvoicePage() {
     const pageHeight = doc.internal.pageSize.height;
     const footerY = pageHeight - 30;
     doc.setFontSize(10);
-    doc.setTextColor(128, 128, 128); // Gray text
+    doc.setTextColor(88, 70, 70); // Gray text
     doc.text('Thank you for your business!', 10, footerY);
     doc.text('Contact us: sourabhbhattacharjee123@outlook.com | +49 152 220 14961', 10, footerY + 10);
     doc.text('Address: Kurt Schumacher Straße 12.1.4 , Kaiserslautern, Germany ', 10, footerY + 20);
@@ -233,6 +232,8 @@ export default function InvoicePage() {
     items[0].quantity="";
     items[0].unitCost="";
     reset({ items });
+    setSubTotal(0);
+    setTotal(0);
   };
 
   return (

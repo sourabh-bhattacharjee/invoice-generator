@@ -5,7 +5,7 @@ import { auth } from '../firebaseInit';
 
 export default function NavBar({user}){
     
-    const dispatch = useDispatch();
+    const dispatch = useDispatch('first');
     
   const handleSignOut = async () => {
     try {
@@ -16,10 +16,11 @@ export default function NavBar({user}){
       alert(error.message);
     }
   };
+  
     return(
         
         <div className="navBody">
-            <div className="appSec">
+            <div className="appSec" onClick={() => {window.location.reload()}}>
                 <img className="iconImg" src="https://cdn-icons-png.flaticon.com/128/11521/11521864.png" alt="app-icon" />
                 <h1 className="appName">Invoice Generator</h1>
             </div>
