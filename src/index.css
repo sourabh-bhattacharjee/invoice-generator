@@ -345,6 +345,24 @@ body {
   text-align: center;
   font-size: 60px;
 }
+.invContent button{
+  color: #b1b5c5;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 38px;
+    background-color: #29326b;
+    border-radius: 99px;
+    width: 65%;
+    height: 91px;
+    padding: 12px;
+    position: relative;
+    left: 18%;
+    margin-top: 30px;
+}
+.invContent button:hover{
+  background-color: #1d52cc;
+  color: #fff;
+}
 
 .floatLeft{
   float: left;
@@ -369,4 +387,68 @@ body {
   min-height: 48px;
   min-width: 454px;
   max-width: 454px;
+}
+.greyTxtRow{
+  display: inline-flex;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.dynamicBox{
+  padding: 0px 12px 0px 12px;
+}
+.delItem{
+    width: 20px;
+    height: 20px;
+    left: 20%;
+    position: relative;
+    top: 42px;
+}
+.addDynamicrow{
+  width: 30px;
+}
+.addSec{
+    cursor: pointer;
+    justify-content: center;
+    display: grid;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 9%;
+    left: 44%;
+    position: relative;
+}
+.addSec span{
+    left: -16px;
+    position: relative;
+    font-size: large;
+    font-weight: 500;
+}
+.subtot span{
+  font-size: large;
+  font-weight: 500;
+}
+.stTax{
+  left: 72%;
+  position: relative;
+}
+.taxF{
+  width: 8%;
+    float: right;
+    top: -12px;
+    position: relative;
+    height: 7px;
+}
+.percentage{
+  height: 14px;
+  width: 14px;
+  position: relative;
+    left: 94%;
+    top: -6px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
