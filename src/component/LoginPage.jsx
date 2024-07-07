@@ -67,6 +67,10 @@ export default function LoginPage(){
                 <span>Don't have an account? please </span> 
                 <span className="rfrLogin" onClick={handleRfrLogin}>Sign up</span>
             </div>
+            <div className="navDefault">
+                <h3 style={{color:"white"}}>user name : 1234@gmail.com</h3>
+                <h3 style={{color:"white"}}>password: Sou@7003</h3>
+            </div>
             <ToastContainer/>
         </div>
     );

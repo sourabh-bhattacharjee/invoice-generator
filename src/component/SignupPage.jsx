@@ -129,6 +129,10 @@ export default function SignupPage(){
             <div className="close-online-drawer" onClick={closeComponent}>
                 <img src="https://cdn-icons-png.flaticon.com/128/1828/1828778.png" alt="cross" />
             </div>
+            <div className="defaultSpan">
+                <span style={{color:"white"}}>Please do not use personal email address. For checking you can enter fake email names.</span>
+                <span style={{color:"white"}}>you can use default usename and password. I have added in the login page</span>
+            </div>
             <div className="signupMain">
                 <div className="sgnupMainChild">Write invoices in record time!</div>
                 <div className="sgnupContent">
